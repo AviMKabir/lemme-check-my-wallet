@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lemme Check My Wallet</title>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <div class="box-layout">
+                <div class="react-reveal box-layout__box"
+                    style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-65879068623916-1">
+                    <h1 class="box-layout-title">Lemme Check My Wallet</h1>
+                    <p>Take Control of Your Spending!</p>
+                    <!--Drop down box-->
+                    <select class="selectpicker" data-width="auto" data-dropup-auto="false">
+                        <optgroup label="Bills">
+                            <option>Rent</option>
+                            <option>Car</option>
+                            <option>Utilities</option>
+                        </optgroup>
+                        <optgroup label="Daily Living">
+                            <option>Groceries</option>
+                            <option>Dining Out</option>
+                            <option>Gas</option>
+                        </optgroup>
+                        <optgroup label="Entertainment">
+                            <option>Movies</option>
+                            <option>Vacation/Travel</option>
+                            <option>Clubs/Bars</option>
+                        </optgroup>
+                        <option>Miscellaneous</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add ChatBox Here-->
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('.selectpicker').selectpicker();
+    });
+</script>
