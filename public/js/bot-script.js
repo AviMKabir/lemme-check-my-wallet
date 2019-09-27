@@ -1,22 +1,25 @@
-//--------------------------------
-//var API = {getExamples: function(){ return $.ajax({ url: "api/examples", type: "GET"});}};
-//--------------------------------
-
 /* eslint-disable camelcase */
 var botui = new BotUI("help-bot");
-//-------------------------------
-//var API = {getExamples: function(){ return $.ajax({ url: "api/examples", type: "GET"});}};
+
+var name;
+var budget;
+
+//--------------------------------
+// Get request to database for name and budget amount. 
 var teachbot = function (){
   $.ajax({ url: "api/examples", type: "GET"}).then(function(dbExamples){
-    console.log(dbExamples);
-    console.log(dbExamples[0].name);
-    console.log(dbExamples[0].budget);
+    // console.log(dbExamples);
+    // console.log(dbExamples[0].name);
+    // console.log(dbExamples[0].budget);
+    name = dbExamples[0].name;
+    budget = dbExamples[0].budget;
   });
 };
 teachbot();
 //-------------------------------
-var name = "Bob";
-var budget = 500;
+
+// var name = "Bob";
+// var budget = 500;
 
 botui.message.add({
   delay: 500,
