@@ -1,6 +1,20 @@
+//--------------------------------
+//var API = {getExamples: function(){ return $.ajax({ url: "api/examples", type: "GET"});}};
+//--------------------------------
+
 /* eslint-disable camelcase */
 var botui = new BotUI("help-bot");
-
+//-------------------------------
+//var API = {getExamples: function(){ return $.ajax({ url: "api/examples", type: "GET"});}};
+var teachbot = function (){
+  $.ajax({ url: "api/examples", type: "GET"}).then(function(dbExamples){
+    console.log(dbExamples);
+    console.log(dbExamples[0].name);
+    console.log(dbExamples[0].budget);
+  });
+};
+teachbot();
+//-------------------------------
 var name = "Bob";
 var budget = 500;
 
@@ -14,7 +28,7 @@ botui.message.add({
     loading: true,
     content: "You going out tonight?"
   });
-}).then(function () {
+}).then(function () { 
   return botui.action.button({
     action: [
       {
