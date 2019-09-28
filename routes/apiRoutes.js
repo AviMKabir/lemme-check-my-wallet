@@ -23,4 +23,22 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  app.put("/api/examples", function(req, res) {
+
+    db.Example.update({
+      budget: req.body.budget,
+    }, {
+      where: {
+        id: 1
+      }
+    }).then(function(dbTodo) {
+      res.json(dbTodo);
+    });
+  });
+  
 }; 
+
+
+
+
