@@ -16,6 +16,8 @@ var teachbot = function (){
   });
 };
 teachbot();
+
+
 //-------------------------------
 
 // var name = "Bob";
@@ -62,11 +64,20 @@ botui.message.add({
       budget = budget - spent;
       console.log(budget);
 
-      botui.message.add({
-        delay: 500,
-        loading: true,
-        content: "That's fine, you'll still have " + budget + " left. Have fun!"
+      $.ajax({ url: "api/examples", type: "PUT", data: {budget: budget}}).then(function(results){
+     
+        console.log(results);
+        botui.message.add({
+          delay: 500,
+          loading: true,
+          content: "That's fine, you'll still have " + budget + " left. Have fun!"
+        });
+
       });
+
+    
+
+
 
     });
   }
