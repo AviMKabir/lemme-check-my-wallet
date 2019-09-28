@@ -11,6 +11,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/login", function(req, res) {
+    db.Example.findAll({}).then(function() {
+      res.render("login", {
+       
+      });
+    });
+  });
+
   app.get("/robot", function(req, res) {
     db.Example.findAll({}).then(function() {
       res.render("robot", {
