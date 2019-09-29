@@ -69,7 +69,7 @@ botui.message.add({
   var message;
 
   if (res.value === "yes") {
-    message = "How much money do you want to spend? You have " + budget + " left";
+    message = "How much money do you want to spend? You have $" + budget + " left!";
     botui.action.text({
       action: {
         sub_type: "number",
@@ -91,7 +91,7 @@ botui.message.add({
           botui.message.add({
             delay: 500,
             loading: true,
-            content: "That's fine, you'll still have " + budget + " left. Have fun!"
+            content: "That's fine, you'll still have $" + budget + " left. Have fun!"
           });
   
         });
@@ -102,7 +102,7 @@ botui.message.add({
         botui.message.add({
           delay: 500,
           loading: true,
-          content: "Uhhh....are you sure you're going to over budget.... " + budget + " left. Have fun!"
+          content: "Uhhh....are you sure you're going to over budget.... $" + budget + " left. Have fun!"
         });
 
       }
