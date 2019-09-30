@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
+  app.get("/submit", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
         msg: "Welcome!",
@@ -11,7 +11,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/", function(req, res) {
     db.Example.findAll({}).then(function() {
       res.render("login", {
        
@@ -19,9 +19,25 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/profile", function(req, res) {
+    db.Example.findOne({ where: { id: 1 } }).then(function(dbExample) {
+      res.render("profile", {
+        example: dbExample
+      });
+    });
+  });
+
   app.get("/robot", function(req, res) {
     db.Example.findAll({}).then(function() {
       res.render("robot", {
+       
+      });
+    });
+  });
+
+  app.get("/walletplus", function(req, res) {
+    db.Example.findAll({}).then(function() {
+      res.render("walletplus", {
        
       });
     });

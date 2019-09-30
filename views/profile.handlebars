@@ -1,8 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+​
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="profile.css">
+
+
+
+  <title>My Wallet</title>
+
+<style>
+
 /* Flip Card Styling */
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+
 body {
-    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-    margin: 12px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight:500;
   }
   
   
@@ -176,9 +209,15 @@ color: white;
 
 .btn {
 
-  background-color: rgb(32, 143, 32);
+  background-color: #208f20;
 
 
+}
+
+.btn:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #53b953;
+    border-color: #53b953; /*set the color you want here*/
 }
 
 
@@ -736,6 +775,236 @@ color: white;
 
 
 
+</style>
+
+
+</head>
+
+
+
+
+
+<Body>
+
+
+
+
+  <!-- Main Profile -->
+  <section class="container">
+    <div class="page-header">
+      <div class="row active-with-click">
+        <div class="col-md-6 col-sm-12 col-xs-12 prof-card">
+          <article class="material-card Red">
+            <h2>
+              <span>{{example.name}} </span>
+              <strong>
+                <i class="fa fa-fw fa-star"></i>
+                Premium User </strong>
+            </h2>
+            <div class="mc-content">
+              <div class="img-container">
+                <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg">
+                {{!-- <img class="img-responsive" src="./images/Default Profile.png"> --}}
+              </div>
+              <div class="mc-description">
+                <h3>personal goal:</h3>
+                <h5>have enough saved to take the kids to disneyland!</5>
+
+
+
+                  <!-- <img src="Images/IMG_1926.jpg" class="wallet img-fluid" alt="Jimmy Eat World"> -->
+
+
+              </div>
+            </div>
+            <a class="mc-btn-action">
+              <i class="fa fa-bars"></i>
+            </a>
+            <div class="mc-footer text-center">
+
+
+              <button onclick="myFunction()" class="btn btn-lg btn-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" width="40" /> 
+
+              </button>
+
+            </div>
+          </article>
+        </div>
+
+
+
+        <!-- Bills profile -->
+        <div class="wrapper">
+
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="hover panel">
+              <div class="front">
+                <div class="box1">
+                  <p>Bills</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="box2">
+                  <p> {{example.budget}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Transactions profile -->
+          <div class="col-md-2 col-sm-12 col-xs-12">
+            <div class="hover panel text-center">
+              <div class="front">
+                <div class="box1-2">
+                  <p>Transactions</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="box2-2">
+                  <p>-100</p>
+                  <p>-10</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+
+    $(document).ready(function () {
+      // set up hover panels
+      // although this can be done without JavaScript, we've attached these events
+      // because it causes the hover to be triggered when the element is tapped on a touch device
+      $('.hover').hover(function () {
+        $(this).addClass('flip');
+      }, function () {
+        $(this).removeClass('flip');
+      });
+    });
+
+    $(function () {
+      $('.material-card > .mc-btn-action').click(function () {
+        var card = $(this).parent('.material-card');
+        var icon = $(this).children('i');
+        icon.addClass('fa-spin-fast');
+
+        if (card.hasClass('mc-active')) {
+          card.removeClass('mc-active');
+
+          window.setTimeout(function () {
+            icon
+              .removeClass('fa-arrow-left')
+              .removeClass('fa-spin-fast')
+              .addClass('fa-bars');
+
+          }, 800);
+        } else {
+          card.addClass('mc-active');
+
+          window.setTimeout(function () {
+            icon
+              .removeClass('fa-bars')
+              .removeClass('fa-spin-fast')
+              .addClass('fa-arrow-left');
+
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+​
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+  $(function () {
+    $('.material-card > .mc-btn-action').click(function () {
+      var card = $(this).parent('.material-card');
+      var icon = $(this).children('i');
+      icon.addClass('fa-spin-fast');
+
+      if (card.hasClass('mc-active')) {
+        card.removeClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-arrow-left')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-bars');
+
+        }, 800);
+      } else {
+        card.addClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-bars')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-arrow-left');
+
+        }, 800);
+      }
+    });
+  });
+</script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+  $(function () {
+    $('.material-card > .mc-btn-action').click(function () {
+      var card = $(this).parent('.material-card');
+      var icon = $(this).children('i');
+      icon.addClass('fa-spin-fast');
+
+      if (card.hasClass('mc-active')) {
+        card.removeClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-arrow-left')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-bars');
+
+        }, 800);
+      } else {
+        card.addClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-bars')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-arrow-left');
+
+        }, 800);
+      }
+    });
+  });
+</script>
+
+<script type="text/javascript">
+        // Replace google.com with profile link
+        function myFunction() {
+            location.replace("/robot")
+        };
+
+        $("#login-button").click(function (event) {
+            event.preventDefault();
+
+            $('form').fadeOut(500);
+            $('.wrapper').addClass('form-success');
+        });
+    </script>
 
 
 
@@ -747,12 +1016,4 @@ color: white;
 
 
 
-
-
-
-
-
-
-
-
-  
+</Body>

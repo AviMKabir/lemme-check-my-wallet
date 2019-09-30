@@ -9,181 +9,219 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
   <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
- <link rel="stylesheet" href="profile.css">
-  
-  
+  <link rel="stylesheet" href="profile.css">
+
+
 
   <title>My Wallet</title>
 </head>
+
 <Body>
-    
 
 
 
-       <!-- Main Profile -->
+
+  <!-- Main Profile -->
   <section class="container">
-        <div class="page-header">
-          <div class="row active-with-click">
-            <div class="col-md-6 col-sm-2 col-xs-12">
-              <article class="material-card Red">
-                <h2>
-                  <span>John Doe</span>
-                  <strong>
-                    <i class="fa fa-fw fa-star"></i>
-                    Occupation: Spends too much money
-                  </strong>
-                </h2>
-                <div class="mc-content">
-                  <div class="img-container">
-                    <img class="img-responsive"
-                      src="Images/Default Profile.png">
-                  </div>
-                  <div class="mc-description">
-                        <p>Here to spend more funds or add money? Lets Chat.</p> 
-                        <img src="Images/IMG_1926.jpg" class="wallet" alt="Jimmy Eat World">
-                       
-                  
-                  </div>
-                </div>
-                <a class="mc-btn-action">
-                  <i class="fa fa-bars"></i>
-                </a>
-                <div class="mc-footer">
-                  
-                
-                 <button>Ask Wallet</button>
-                
-                </div>
-              </article>
+    <div class="page-header">
+      <div class="row active-with-click">
+        <div class="col-md-6 col-sm-12 col-xs-12 prof-card">
+          <article class="material-card Red">
+            <h2>
+              <span>John Doe</span>
+              <strong>
+                <i class="fa fa-fw fa-star"></i>
+                Premium User </strong>
+            </h2>
+            <div class="mc-content">
+              <div class="img-container">
+                <img class="img-responsive" src="Images/Default Profile.png">
+              </div>
+              <div class="mc-description">
+                <h3>personal goal:</h3>
+                <h5>have enough saved to take the kids to disneyland!</5>
+
+
+
+                  <!-- <img src="Images/IMG_1926.jpg" class="wallet img-fluid" alt="Jimmy Eat World"> -->
+
+
+              </div>
             </div>
-    <!-- Bills profile -->
-    <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="card-container">
-                    <div class="card">
-                      <div class="side"><img src="Images/Bills.jpeg" class="bills" alt="Jimmy Eat World"></div>
-                      <div class="side back">Current Bills</div>
-                    </div>
-                  </div>
-       
-      </div>
-    
-      <!-- Transactions profile -->
-      <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="col-md-2 col-sm-2 col-xs-4">
-                    <div class="card-container">
-                            <div class="card">
-                              <div class="side"><img src="Images/images.jpeg" alt="Jimmy Eat World" class="center"></div>
-                              <div class="side back">Last 5 transactions</div>
-                            </div>
-                          </div>
-    
+            <a class="mc-btn-action">
+              <i class="fa fa-bars"></i>
+            </a>
+            <div class="mc-footer text-center">
+
+
+              <button class="btn btn-lg btn-block">
+                <img src="Images/wallet-q-3.png" width="40" /> 
+
+              </button>
+
+            </div>
+          </article>
+        </div>
+
+
+
+        <!-- Bills profile -->
+        <div class="wrapper">
+
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="hover panel">
+              <div class="front">
+                <div class="box1">
+                  <p>Bills</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="box2">
+                  <p>$500 (placeholder)</p>
+                </div>
+              </div>
+            </div>
           </div>
-    
-    
-    
-    
-    
-    
-     
-      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-      <script>
-        $(function () {
-          $('.material-card > .mc-btn-action').click(function () {
-            var card = $(this).parent('.material-card');
-            var icon = $(this).children('i');
-            icon.addClass('fa-spin-fast');
-    
-            if (card.hasClass('mc-active')) {
-              card.removeClass('mc-active');
-    
-              window.setTimeout(function () {
-                icon
-                  .removeClass('fa-arrow-left')
-                  .removeClass('fa-spin-fast')
-                  .addClass('fa-bars');
-    
-              }, 800);
-            } else {
-              card.addClass('mc-active');
-    
-              window.setTimeout(function () {
-                icon
-                  .removeClass('fa-bars')
-                  .removeClass('fa-spin-fast')
-                  .addClass('fa-arrow-left');
-    
-              }, 800);
-            }
-          });
-        });
-      </script>
-    </body>
-    ​
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script>
-      $(function () {
-        $('.material-card > .mc-btn-action').click(function () {
-          var card = $(this).parent('.material-card');
-          var icon = $(this).children('i');
-          icon.addClass('fa-spin-fast');
-    
-          if (card.hasClass('mc-active')) {
-            card.removeClass('mc-active');
-    
-            window.setTimeout(function () {
-              icon
-                .removeClass('fa-arrow-left')
-                .removeClass('fa-spin-fast')
-                .addClass('fa-bars');
-    
-            }, 800);
-          } else {
-            card.addClass('mc-active');
-    
-            window.setTimeout(function () {
-              icon
-                .removeClass('fa-bars')
-                .removeClass('fa-spin-fast')
-                .addClass('fa-arrow-left');
-    
-            }, 800);
-          }
-        });
+
+
+          <!-- Transactions profile -->
+          <div class="col-md-2 col-sm-12 col-xs-12">
+            <div class="hover panel text-center">
+              <div class="front">
+                <div class="box1-2">
+                  <p>Transactions</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="box2-2">
+                  <p>-100</p>
+                  <p>-10</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+
+    $(document).ready(function () {
+      // set up hover panels
+      // although this can be done without JavaScript, we've attached these events
+      // because it causes the hover to be triggered when the element is tapped on a touch device
+      $('.hover').hover(function () {
+        $(this).addClass('flip');
+      }, function () {
+        $(this).removeClass('flip');
       });
-    </script>
-    
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script>
-      $(function () {
-        $('.material-card > .mc-btn-action').click(function () {
-          var card = $(this).parent('.material-card');
-          var icon = $(this).children('i');
-          icon.addClass('fa-spin-fast');
-    
-          if (card.hasClass('mc-active')) {
-            card.removeClass('mc-active');
-    
-            window.setTimeout(function () {
-              icon
-                .removeClass('fa-arrow-left')
-                .removeClass('fa-spin-fast')
-                .addClass('fa-bars');
-    
-            }, 800);
-          } else {
-            card.addClass('mc-active');
-    
-            window.setTimeout(function () {
-              icon
-                .removeClass('fa-bars')
-                .removeClass('fa-spin-fast')
-                .addClass('fa-arrow-left');
-    
-            }, 800);
-          }
-        });
+    });
+
+    $(function () {
+      $('.material-card > .mc-btn-action').click(function () {
+        var card = $(this).parent('.material-card');
+        var icon = $(this).children('i');
+        icon.addClass('fa-spin-fast');
+
+        if (card.hasClass('mc-active')) {
+          card.removeClass('mc-active');
+
+          window.setTimeout(function () {
+            icon
+              .removeClass('fa-arrow-left')
+              .removeClass('fa-spin-fast')
+              .addClass('fa-bars');
+
+          }, 800);
+        } else {
+          card.addClass('mc-active');
+
+          window.setTimeout(function () {
+            icon
+              .removeClass('fa-bars')
+              .removeClass('fa-spin-fast')
+              .addClass('fa-arrow-left');
+
+          }, 800);
+        }
       });
-    </script>
+    });
+  </script>
+</body>
+​
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+  $(function () {
+    $('.material-card > .mc-btn-action').click(function () {
+      var card = $(this).parent('.material-card');
+      var icon = $(this).children('i');
+      icon.addClass('fa-spin-fast');
+
+      if (card.hasClass('mc-active')) {
+        card.removeClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-arrow-left')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-bars');
+
+        }, 800);
+      } else {
+        card.addClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-bars')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-arrow-left');
+
+        }, 800);
+      }
+    });
+  });
+</script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+  $(function () {
+    $('.material-card > .mc-btn-action').click(function () {
+      var card = $(this).parent('.material-card');
+      var icon = $(this).children('i');
+      icon.addClass('fa-spin-fast');
+
+      if (card.hasClass('mc-active')) {
+        card.removeClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-arrow-left')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-bars');
+
+        }, 800);
+      } else {
+        card.addClass('mc-active');
+
+        window.setTimeout(function () {
+          icon
+            .removeClass('fa-bars')
+            .removeClass('fa-spin-fast')
+            .addClass('fa-arrow-left');
+
+        }, 800);
+      }
+    });
+  });
+</script>
 
 
 

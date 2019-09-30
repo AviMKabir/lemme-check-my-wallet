@@ -1,9 +1,3 @@
-/* eslint-disable camelcase */
-var botui = new BotUI("help-bot");
-
-var name;
-var budget;
-
 //--------------------------------
 // Get request to database for name and budget amount. 
 var teachbot = function (){
@@ -15,7 +9,24 @@ var teachbot = function (){
     budget = dbExamples[0].budget;
   });
 };
+
 teachbot();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  teachbot();
+}, false);
+
+/* eslint-disable camelcase */
+var botui = new BotUI("help-bot");
+
+var name;
+var budget;
+
+
+
+
+
 
 
 //-------------------------------
@@ -26,7 +37,15 @@ teachbot();
 botui.message.add({
   delay: 500,
   loading: true,
-  content: "Hi " + name + "!"
+  content: "(•̀ᴗ•́)و ̑̑"
+}).then(function (){
+
+  return botui.message.add({
+    delay: 500,
+    loading: true,
+    content: "Hi " + name + "!"
+  });
+
 }).then(function () {
   return botui.message.add({
     delay: 500,
@@ -50,7 +69,7 @@ botui.message.add({
   var message;
 
   if (res.value === "yes") {
-    message = "How much money do you want to spend? You have " + budget + " left";
+    message = "How much money do you want to spend? You have $" + budget + " left!";
     botui.action.text({
       action: {
         sub_type: "number",
@@ -64,20 +83,33 @@ botui.message.add({
       budget = budget - spent;
       console.log(budget);
 
-      $.ajax({ url: "api/examples", type: "PUT", data: {budget: budget}}).then(function(results){
+      if (budget > 0) {
+        
+        $.ajax({ url: "api/examples", type: "PUT", data: {budget: budget}}).then(function(results){
      
-        console.log(results);
+          console.log(results);
+          botui.message.add({
+            delay: 500,
+            loading: true,
+            content: "That's fine, you'll still have $" + budget + " left. Have fun!"
+          });
+  
+        });
+      }
+
+      else {
+
         botui.message.add({
           delay: 500,
           loading: true,
-          content: "That's fine, you'll still have " + budget + " left. Have fun!"
+          content: "Uhhh....are you sure you're going to over budget.... $" + budget + " left. Have fun!"
         });
 
-      });
+      }
 
     
 
-
+  
 
     });
   }

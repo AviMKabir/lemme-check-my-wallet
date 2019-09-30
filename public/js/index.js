@@ -80,6 +80,10 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
+
+  myFunction();
+
+
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -97,3 +101,8 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+function myFunction() {
+  location.replace("/profile");
+}
