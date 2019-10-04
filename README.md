@@ -63,7 +63,7 @@ Users can choose put in their name and budget into the database and then chat wi
 
 ## Design
 
-[<img src="https://i.gyazo.com/09d73c90f093ff4831d57b3ff2cba8d0.jpg">](https://i.gyazo.com/09d73c90f093ff4831d57b3ff2cba8d0.jpg)
+[<img src="https://i.gyazo.com/6da21b43e6994e5c7fc4f5b02dfef161.jpg">](https://i.gyazo.com/6da21b43e6994e5c7fc4f5b02dfef161.jpg)
 
 [<img src="https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg">](https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg)
 
