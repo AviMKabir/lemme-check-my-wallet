@@ -54,19 +54,18 @@ Using the BOTUI and DIALOGFLOW we connected these javascript apps that allowed u
 
 Users can choose put in their name and budget into the database and then chat with the bot to edit their budget
 
-[<img src="https://media.giphy.com/media/eepP91Q62ct92vFN7j/giphy.gif">]
-(https://media.giphy.com/media/eepP91Q62ct92vFN7j/giphy.gif)
+[<img src="https://i.gyazo.com/8e26378550376e3eca92951d18eacaa2.png">](https://i.gyazo.com/8e26378550376e3eca92951d18eacaa2.png)
 
-[<img src="https://media.giphy.com/media/jsl0sEwRiwfxR05kE3/giphy.gif">]
-(https://media.giphy.com/media/jsl0sEwRiwfxR05kE3/giphy.gif)
+[<img src="https://i.gyazo.com/56ae3e650a74cd58c423e6c602d0ff73.png">](https://i.gyazo.com/56ae3e650a74cd58c423e6c602d0ff73.png)
 
-## DESIGN
 
-[<img src="https://i.gyazo.com/557af59744eab356c942141c57d09c11.jpg">]
-(https://i.gyazo.com/557af59744eab356c942141c57d09c11.jpg)
 
-[<img src="https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg">]
-(https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg)
+
+## Design
+
+[<img src="https://i.gyazo.com/09d73c90f093ff4831d57b3ff2cba8d0.jpg">](https://i.gyazo.com/09d73c90f093ff4831d57b3ff2cba8d0.jpg)
+
+[<img src="https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg">](https://i.gyazo.com/aa4aa711ae1155cf36d4ad95b7c490b9.jpg)
 
 
 
